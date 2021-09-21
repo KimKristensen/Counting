@@ -12,13 +12,13 @@ namespace Counters.Services
             counters = new ConcurrentDictionary<string, int>();
         }
 
-        public int GetCounter(string counter)
+        public int? GetCounter(string counter)
         {
             if(counters.TryGetValue(counter, out var c))
             {
                 return c;
             }
-            return 0;
+            return null;
         }
 
         public void Increment(string counter)
@@ -31,5 +31,9 @@ namespace Counters.Services
             counters.AddOrUpdate(counter, -1, (key, oldValue) => oldValue - 1);
         }
 
+        public void DeleteCounter(string counter)
+        {
+            counters.TryRemove(counter, out var _);
+        }
     }
 }

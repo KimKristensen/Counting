@@ -1,26 +1,19 @@
 # A countable service
 
-## Technical choices
-Counter REST service will be implemented in ASP.NET core.
-Business logic service will be a written in C#
+## Description
+2 services have been implemented:
+* The Counter service which is the REST service for incrementing counters
+* The CountingBusiness service that calls the Counter service
 
-Data storage for backend will be mocked out...
+Both services are written in C# using visual studio, the REST service is a ASP.net core service. 
 
+RestSharp is used for accessing the REST service
 
-## Progress
-Rest service is running
+## To be done
+Counters are stored in an in-memory readmodel and should be stored in a permanent storage
+Business logic service writes to the console instead of log files
+Improve on error handling
 
-
-## TODO
-Counter should be increased with a number
-Send post message as json object (counter, count)
-Retrieve Get as json object (counter, count)
-Error if getting counter that does not exist (as opposed to zero counter)
-Timestamp on increment / decrement
-Api project with http client
-Business logic that counts
-
-Some way of storing counters on backend
 
 
 

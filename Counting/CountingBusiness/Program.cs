@@ -1,15 +1,17 @@
-﻿using System;
-using System.Net;
-using System.Net.Http;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Threading.Tasks;
 
 namespace CountingBusiness
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-
-            
+            await Host
+                .CreateDefaultBuilder(args)
+                .ConfigureServices(services => services.AddHostedService<Application>())
+                .RunConsoleAsync();
         }
     }
 }

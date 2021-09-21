@@ -4,6 +4,7 @@
     {
         void Increment(string counter);
         void Decrement(string counter);
-        int GetCounter(string counter);
+        int? GetCounter(string counter);
+        void DeleteCounter(string counter);
     }
 }

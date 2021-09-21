@@ -16,14 +16,13 @@ namespace Counters.Controllers
         private readonly ICounterStore counterStore;
 
         public CountersController(ICounterStore counterStore, ILogger<CountersController> logger)
-        //public CountersController(ILogger<CountersController> logger)
         {
             this.logger = logger;
             this.counterStore = counterStore; ;
         }
 
         [HttpGet]
-        public int GetCounter(string counter)
+        public int? GetCounter(string counter)
         {
             return counterStore.GetCounter(counter);
         }
@@ -45,7 +44,7 @@ namespace Counters.Controllers
         [HttpDelete]
         public void DeleteCounter(string counter)
         {
-
+            counterStore.DeleteCounter(counter);
         }
 
     }
