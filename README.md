@@ -10,9 +10,11 @@ Both services are written in C# using visual studio, the REST service is a ASP.n
 RestSharp is used for accessing the REST service
 
 ## To be done
+Not everything has been implemented and the following are the areas that I would adrees next
 * Counters are stored in an in-memory readmodel and should be stored in a permanent storage
-* Business logic service writes to the console instead of log files
+* The performance of writing counters is not overwhelming
 * Improve on error handling
+
 
 
 
