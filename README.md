@@ -2,8 +2,8 @@
 
 ## Description
 2 services have been implemented:
-* The Counter service which is the REST service for incrementing counters
-* The CountingBusiness service that calls the Counter service
+* The Counter service which is the REST service for incrementing and decreasing counters
+* The BusinessLogic service that calls the Counter service
 
 Both services are written in C# using visual studio, the REST service is a ASP.net core service. 
 
