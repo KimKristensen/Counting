@@ -1,9 +1,8 @@
-﻿using Counters.Api.ServiceClients;
+﻿using CounterService.Api.ServiceClients;
 using System;
-using System.Threading.Tasks;
 using System.Timers;
 
-namespace CountingBusiness
+namespace BusinessLogicService.Counting
 {
     public class CounterUpdater
     {
@@ -32,20 +31,20 @@ namespace CountingBusiness
             updateTimer.Stop();
         }
 
-        private void UpdateCounters()
+        private async void UpdateCounters()
         {
             try
             {
-                counterServiceClient.IncrementAsync("AA").Wait();
-                counterServiceClient.IncrementAsync("BB").Wait();
-                counterServiceClient.IncrementAsync("BB").Wait();
-                counterServiceClient.DecrementAsync("CC").Wait();
+                await counterServiceClient.IncrementAsync("AA");
+                await counterServiceClient.IncrementAsync("BB");
+                await counterServiceClient .IncrementAsync("BB");
+                await counterServiceClient.DecrementAsync("CC");
 
                 if (random.NextDouble() < 0.01)
                 {
-                    counterServiceClient.DeleteAsync("CC").Wait();
+                    await counterServiceClient .DeleteAsync("CC");
                 }
-            } 
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);

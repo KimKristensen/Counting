@@ -1,8 +1,7 @@
 ﻿using RestSharp;
-using System;
 using System.Threading.Tasks;
 
-namespace Counters.Api.ServiceClients
+namespace CounterService.Api.ServiceClients
 {
     public class CounterServiceClient
     {
@@ -21,8 +20,8 @@ namespace Counters.Api.ServiceClients
 
         public async Task DecrementAsync(string counter)
         {
-             var request = new RestRequest($"Counters/Decrement?counter={counter}");
-             await restClient.PutAsync<string>(request);
+            var request = new RestRequest($"Counters/Decrement?counter={counter}");
+            await restClient.PutAsync<string>(request);
         }
 
         public async Task DeleteAsync(string counter)

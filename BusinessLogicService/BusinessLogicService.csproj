@@ -10,6 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Counters.Api\Counters.Api.csproj" />
+    <ProjectReference Include="..\CounterService.Api\CounterService.Api.csproj" />
   </ItemGroup>
 </Project>

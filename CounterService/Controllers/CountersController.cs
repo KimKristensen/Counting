@@ -1,12 +1,8 @@
-﻿using Counters.Services;
+﻿using CounterService.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Counters.Controllers
+namespace CounterService.Controllers
 {
     [ApiController]
     [Route("[controller]")]

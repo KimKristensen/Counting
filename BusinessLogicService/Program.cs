@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using System.Threading.Tasks;
 
-namespace CountingBusiness
+namespace BusinessLogicService
 {
     class Program
     {

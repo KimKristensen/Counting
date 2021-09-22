@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 
-namespace Counters.Services
+namespace CounterService.Services
 {
     class InMemoryCounterStore : ICounterStore
     {
@@ -14,7 +13,7 @@ namespace Counters.Services
 
         public int? GetCounter(string counter)
         {
-            if(counters.TryGetValue(counter, out var c))
+            if (counters.TryGetValue(counter, out var c))
             {
                 return c;
             }

@@ -1,4 +1,4 @@
-﻿namespace Counters.Services
+﻿namespace CounterService.Services
 {
     public interface ICounterStore
     {

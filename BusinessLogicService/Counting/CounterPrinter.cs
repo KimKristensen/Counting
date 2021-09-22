@@ -1,8 +1,8 @@
-﻿using Counters.Api.ServiceClients;
+﻿using CounterService.Api.ServiceClients;
 using System;
 using System.Timers;
 
-namespace CountingBusiness.Counting
+namespace BusinessLogicService.Counting
 {
     public class CounterPrinter
     {
@@ -36,7 +36,7 @@ namespace CountingBusiness.Counting
                 var bbCounter = counterServiceClient.GetAsync("BB").Result;
                 var ccCounter = counterServiceClient.GetAsync("CC").Result;
                 Console.WriteLine($"AA: {aaCounter}, BB: {bbCounter}, CC: {ccCounter}");
-            } 
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);

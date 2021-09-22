@@ -1,10 +1,10 @@
-﻿using Counters.Api.ServiceClients;
-using CountingBusiness.Counting;
+﻿using BusinessLogicService.Counting;
+using CounterService.Api.ServiceClients;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CountingBusiness
+namespace BusinessLogicService
 {
     public class Application : IHostedService
     {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Counters.Api.ServiceClients
+namespace CounterService.Api.ServiceClients
 {
     interface ICounterServiceClient
     {

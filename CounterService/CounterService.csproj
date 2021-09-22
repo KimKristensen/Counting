@@ -1,7 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>CounterService</AssemblyName>
+    <RootNamespace>CounterService</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Counters.Api\Counters.Api.csproj" />
+    <ProjectReference Include="..\CounterService.Api\CounterService.Api.csproj" />
   </ItemGroup>
 
 </Project>
