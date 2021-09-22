@@ -28,14 +28,16 @@ namespace BusinessLogicService.Counting
             printTimer.Stop();
         }
 
-        private void PrintCounters()
+        private async void PrintCounters()
         {
             try
             {
-                var aaCounter = counterServiceClient.GetAsync("AA").Result;
-                var bbCounter = counterServiceClient.GetAsync("BB").Result;
-                var ccCounter = counterServiceClient.GetAsync("CC").Result;
-                Console.WriteLine($"AA: {aaCounter}, BB: {bbCounter}, CC: {ccCounter}");
+                var aaCounter = await counterServiceClient.GetAsync("AA");
+                var bbCounter = await counterServiceClient.GetAsync("BB");
+                var ccCounter = await counterServiceClient.GetAsync("CC");
+                var clients = await counterServiceClient.GetAsync("clients_connected");
+
+                Console.WriteLine($"AA: {aaCounter}, BB: {bbCounter}, CC: {ccCounter}, Clients: {clients}");
             }
             catch (Exception ex)
             {
